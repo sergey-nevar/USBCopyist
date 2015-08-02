@@ -7,5 +7,7 @@ int main(int argc, char *argv[])
 	MainWindow w;
 	w.show();
 	qDebug("Hello, World");
+	qDebug("Hello, World2");
+	qDebug("Hello, World");
 	return a.exec();
 }
