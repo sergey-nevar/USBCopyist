@@ -1,7 +1,5 @@
 #include "MainWindow.h"
 #include "ui_MainWindow.h"
-#include "QTableWidget"
-#include "QLabel"
 
 MainWindow::MainWindow(QWidget *parent) :
 	QMainWindow(parent),
@@ -9,7 +7,8 @@ MainWindow::MainWindow(QWidget *parent) :
 {
 	ui->setupUi(this);
 	QTabWidget *tabWidget = new QTabWidget;
-	tabWidget->addTab(new QLabel(""), "Общее");
+	commonOptionsWindow = new CommonOptionsWindow(this);
+	tabWidget->addTab(commonOptionsWindow, "Общее");
 	tabWidget->addTab(new QLabel(""), "Настройки загрузки с USB-flash");
 	tabWidget->addTab(new QLabel(""), "Настройки выгрузки на USB-flash");
 	setCentralWidget(tabWidget);
