@@ -8,6 +8,8 @@ class FileCopyist
 	QDir destination;
 	public:
 		FileCopyist();
+		bool setSource(QDir sourceDir);
+		bool setDestination(QDir destinationDir);
 };
 
 #endif // FILECOPYIST_H
