@@ -6,7 +6,7 @@ LoadingFromDiskSettingsWindow::LoadingFromDiskSettingsWindow(QWidget *parent) :
 	ui(new Ui::LoadingFromDiskSettingsWindow)
 {
 	ui->setupUi(this);
-	setLayout(ui->horizontalLayout);
+	setLayout(ui->mainLayout);
 }
 
 LoadingFromDiskSettingsWindow::~LoadingFromDiskSettingsWindow()
