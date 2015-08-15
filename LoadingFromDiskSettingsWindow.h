@@ -2,6 +2,7 @@
 #define LOADINGFROMDISKSETTINGSWINDOW_H
 
 #include <QWidget>
+#include <QRegExp>
 
 namespace Ui {
 class LoadingFromDiskSettingsWindow;

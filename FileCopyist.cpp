@@ -2,6 +2,8 @@
 
 FileCopyist::FileCopyist()
 {
+	source.cd("C:\\");
+	destination.cd("D:\\");
 }
 
 bool FileCopyist::setSource(QDir sourceDir){
@@ -17,3 +19,7 @@ bool FileCopyist::setDestination(QDir destinationDir){
 	destination = destinationDir;
 	return true;
 }
+
+//bool FileCopyist::copyFiles(){
+
+//}

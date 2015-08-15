@@ -7,6 +7,11 @@ LoadingFromDiskSettingsWindow::LoadingFromDiskSettingsWindow(QWidget *parent) :
 {
 	ui->setupUi(this);
 	setLayout(ui->mainLayout);
+	QRegExp regExpression("(\\*\\.[\\w]*,? ?)*");
+	QRegExpValidator *regExpValidator = new QRegExpValidator(regExpression, this);
+	ui->firstTurnLineEdit->setValidator(regExpValidator);
+	ui->secondTurnLineEdit->setValidator(regExpValidator);
+	ui->thirdTurnLineEdit->setValidator(regExpValidator);
 }
 
 LoadingFromDiskSettingsWindow::~LoadingFromDiskSettingsWindow()

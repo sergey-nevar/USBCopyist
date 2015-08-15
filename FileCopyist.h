@@ -10,6 +10,7 @@ class FileCopyist
 		FileCopyist();
 		bool setSource(QDir sourceDir);
 		bool setDestination(QDir destinationDir);
+		void copyFiles();
 };
 
 #endif // FILECOPYIST_H
