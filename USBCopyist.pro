@@ -14,10 +14,15 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         MainWindow.cpp \
-    CommonOptionsWindow.cpp
+    CommonOptionsWindow.cpp \
+    FileCopyist.cpp \
+    LoadingFromDiskSettingsWindow.cpp
 
 HEADERS  += MainWindow.h \
-    CommonOptionsWindow.h
+    CommonOptionsWindow.h \
+    FileCopyist.h \
+    LoadingFromDiskSettingsWindow.h
 
 FORMS    += MainWindow.ui \
-    CommonOptionsWindow.ui
+    CommonOptionsWindow.ui \
+    LoadingFromDiskSettingsWindow.ui

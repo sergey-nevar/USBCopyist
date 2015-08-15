@@ -6,6 +6,7 @@ CommonOptionsWindow::CommonOptionsWindow(QWidget *parent) :
 	ui(new Ui::CommonOptionsWindow)
 {
 	ui->setupUi(this);
+	setLayout(ui->verticalLayout);
 }
 
 CommonOptionsWindow::~CommonOptionsWindow()
