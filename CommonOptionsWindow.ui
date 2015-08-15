@@ -59,7 +59,7 @@
          </font>
         </property>
         <property name="text">
-         <string>Время между запросами USB</string>
+         <string>Time between requests to USB</string>
         </property>
        </widget>
       </item>
@@ -71,7 +71,7 @@
          </font>
         </property>
         <property name="text">
-         <string>Запуск при загрузке Windows</string>
+         <string>Autorun</string>
         </property>
        </widget>
       </item>
@@ -145,7 +145,7 @@
        </font>
       </property>
       <property name="text">
-       <string>Сброс по умолчанию</string>
+       <string>Reset to default</string>
       </property>
      </widget>
     </item>

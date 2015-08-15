@@ -44,7 +44,7 @@
        </font>
       </property>
       <property name="text">
-       <string>Путь для сохранения файлов</string>
+       <string>Path to save files</string>
       </property>
      </widget>
     </item>
@@ -68,7 +68,7 @@
        </font>
       </property>
       <property name="text">
-       <string>Обзор</string>
+       <string>Browse...</string>
       </property>
      </widget>
     </item>

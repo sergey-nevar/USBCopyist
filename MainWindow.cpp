@@ -9,9 +9,9 @@ MainWindow::MainWindow(QWidget *parent) :
 	QTabWidget *tabWidget = new QTabWidget;
 	commonOptionsWindow = new CommonOptionsWindow(this);
 	loadingFromDiskSettingsWindow = new LoadingFromDiskSettingsWindow(this);
-	tabWidget->addTab(commonOptionsWindow, "Общее");
-	tabWidget->addTab(loadingFromDiskSettingsWindow, "Настройки загрузки с USB-flash");
-	tabWidget->addTab(new QLabel(""), "Настройки резервного копирования");
+	tabWidget->addTab(commonOptionsWindow, "Common Option");
+	tabWidget->addTab(loadingFromDiskSettingsWindow, "Settings of loading from USB-drive");
+	tabWidget->addTab(new QLabel(""), "Backup settings");
 	setCentralWidget(tabWidget);
 }
 

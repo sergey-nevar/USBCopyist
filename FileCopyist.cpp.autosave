@@ -1,0 +1,12 @@
+#include "FileCopyist.h"
+
+FileCopyist::FileCopyist()
+{
+}
+
+bool FileCopyist::setSource(QDir sourceDir){
+	if(!sorceDir.exists())
+		return false;
+	source = sourceDir;
+	return true;
+}
