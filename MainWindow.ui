@@ -6,24 +6,24 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>500</width>
-    <height>300</height>
+    <width>700</width>
+    <height>400</height>
    </rect>
   </property>
   <property name="minimumSize">
-   <size>
-    <width>500</width>
-    <height>300</height>
-   </size>
-  </property>
-  <property name="maximumSize">
    <size>
     <width>700</width>
     <height>400</height>
    </size>
   </property>
+  <property name="maximumSize">
+   <size>
+    <width>900</width>
+    <height>500</height>
+   </size>
+  </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>USBCopyist</string>
   </property>
   <widget class="QWidget" name="centralWidget"/>
   <widget class="QMenuBar" name="menuBar">
@@ -31,7 +31,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>500</width>
+     <width>700</width>
      <height>21</height>
     </rect>
    </property>

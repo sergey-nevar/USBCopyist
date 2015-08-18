@@ -19,6 +19,6 @@ LoadingFromDiskSettingsWindow::~LoadingFromDiskSettingsWindow()
 
 void LoadingFromDiskSettingsWindow::on_browsePushButton_clicked()
 {
-	QString path = QFileDialog::getExistingDirectory(0, "Choose folder for downloaded files", "C:\\");
+	QString path = QFileDialog::getExistingDirectory(this, "Choose folder for downloaded files", "C:\\");
 	ui->pathLineEdit->setText(path);
 }
