@@ -6,20 +6,23 @@ FileCopyist::FileCopyist()
 	destination.cd("D:\\");
 }
 
-bool FileCopyist::setSource(QDir sourceDir){
+bool FileCopyist::setSource(QDir sourceDir)
+{
 	if(!sourceDir.exists())
 		return false;
 	source = sourceDir;
 	return true;
 }
 
-bool FileCopyist::setDestination(QDir destinationDir){
+bool FileCopyist::setDestination(QDir destinationDir)
+{
 	if(!destinationDir.exists())
 		return false;
 	destination = destinationDir;
 	return true;
 }
 
-//bool FileCopyist::copyFiles(){
+//bool FileCopyist::copyFiles()
+//{
 
 //}

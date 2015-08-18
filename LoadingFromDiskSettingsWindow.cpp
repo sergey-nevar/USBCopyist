@@ -9,12 +9,16 @@ LoadingFromDiskSettingsWindow::LoadingFromDiskSettingsWindow(QWidget *parent) :
 	setLayout(ui->mainLayout);
 	QRegExp regExpression("(\\*\\.[\\w]*,? ?)*");
 	QRegExpValidator *regExpValidator = new QRegExpValidator(regExpression, this);
-	ui->firstTurnLineEdit->setValidator(regExpValidator);
-	ui->secondTurnLineEdit->setValidator(regExpValidator);
-	ui->thirdTurnLineEdit->setValidator(regExpValidator);
+	ui->extensionsLineEdit->setValidator(regExpValidator);
 }
 
 LoadingFromDiskSettingsWindow::~LoadingFromDiskSettingsWindow()
 {
 	delete ui;
+}
+
+void LoadingFromDiskSettingsWindow::on_browsePushButton_clicked()
+{
+	QString path = QFileDialog::getExistingDirectory(0, "Choose folder for downloaded files", "C:\\");
+	ui->pathLineEdit->setText(path);
 }
