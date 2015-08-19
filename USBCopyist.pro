@@ -16,12 +16,14 @@ SOURCES += main.cpp\
         MainWindow.cpp \
     CommonOptionsWindow.cpp \
     FileCopyist.cpp \
-    LoadingFromDiskSettingsWindow.cpp
+    LoadingFromDiskSettingsWindow.cpp \
+    Options.cpp
 
 HEADERS  += MainWindow.h \
     CommonOptionsWindow.h \
     FileCopyist.h \
-    LoadingFromDiskSettingsWindow.h
+    LoadingFromDiskSettingsWindow.h \
+    Options.h
 
 FORMS    += MainWindow.ui \
     CommonOptionsWindow.ui \

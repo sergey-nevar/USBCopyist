@@ -22,9 +22,19 @@
      <height>201</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
      <spacer name="verticalSpacer_2">
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
       <property name="orientation">
        <enum>Qt::Vertical</enum>
       </property>
@@ -40,6 +50,11 @@
      <layout class="QGridLayout" name="gridLayout">
       <item row="0" column="0">
        <spacer name="horizontalSpacer">
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
         <property name="orientation">
          <enum>Qt::Horizontal</enum>
         </property>
@@ -55,7 +70,7 @@
        <widget class="QLabel" name="timeRequestLabel">
         <property name="font">
          <font>
-          <pointsize>12</pointsize>
+          <pointsize>11</pointsize>
          </font>
         </property>
         <property name="text">
@@ -67,7 +82,7 @@
        <widget class="QLabel" name="autorunLabel">
         <property name="font">
          <font>
-          <pointsize>12</pointsize>
+          <pointsize>11</pointsize>
          </font>
         </property>
         <property name="text">
@@ -79,7 +94,7 @@
        <widget class="QCheckBox" name="autorunCheckBox">
         <property name="font">
          <font>
-          <pointsize>12</pointsize>
+          <pointsize>11</pointsize>
          </font>
         </property>
         <property name="text">
@@ -101,6 +116,11 @@
           <height>16777215</height>
          </size>
         </property>
+        <property name="font">
+         <font>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
         <property name="minimum">
          <number>1</number>
         </property>
@@ -111,6 +131,11 @@
       </item>
       <item row="0" column="3">
        <spacer name="horizontalSpacer_2">
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
         <property name="orientation">
          <enum>Qt::Horizontal</enum>
         </property>
@@ -126,6 +151,11 @@
     </item>
     <item>
      <spacer name="verticalSpacer">
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
       <property name="orientation">
        <enum>Qt::Vertical</enum>
       </property>
@@ -141,7 +171,7 @@
      <widget class="QPushButton" name="defaultButton">
       <property name="font">
        <font>
-        <pointsize>12</pointsize>
+        <pointsize>11</pointsize>
        </font>
       </property>
       <property name="text">
