@@ -3,3 +3,5 @@
 Options::Options()
 {
 }
+
+int Options::requestTime = 0;
