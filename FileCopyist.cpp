@@ -20,6 +20,7 @@ bool FileCopyist::setDestination(QDir destinationDir)
 		return false;
 	destination = destinationDir;
 	return true;
+
 }
 
 //bool FileCopyist::copyFiles()

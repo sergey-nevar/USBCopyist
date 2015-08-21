@@ -13,3 +13,8 @@ CommonOptionsWindow::~CommonOptionsWindow()
 {
 	delete ui;
 }
+
+void CommonOptionsWindow::on_timeRequestSpinBox_valueChanged(int arg1)
+{
+	Options::setRequestTime(arg1);
+}
