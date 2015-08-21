@@ -20,3 +20,9 @@ void LoadingFromDiskSettingsWindow::on_browsePushButton_clicked()
 	ui->pathLineEdit->setText(path);
 	ui->pathLineEdit->setCursorPosition(0);
 }
+
+
+void LoadingFromDiskSettingsWindow::on_extensionsLineEdit_editingFinished()
+{
+	Options::setExtensionsString(ui->extensionsLineEdit->text());
+}

@@ -4,6 +4,7 @@
 #include <QWidget>
 #include <QFileDialog>
 #include <QRegExp>
+#include <Options.h>
 
 namespace Ui {
 class LoadingFromDiskSettingsWindow;
@@ -24,6 +25,7 @@ class LoadingFromDiskSettingsWindow : public QWidget
 		void changeFirstTurnExtensions(QString);
 	private slots:
 		void on_browsePushButton_clicked();
+		void on_extensionsLineEdit_editingFinished();
 };
 
 #endif // LOADINGFROMDISKSETTINGSWINDOW_H
