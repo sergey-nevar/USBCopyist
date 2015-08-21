@@ -19,15 +19,10 @@ class Options
 		{
 			return requestTime;
 		}
-		static void setExtensionsString(QString extensionsStr)
+		static void setExtensions(QString extensionsStr)
 		{
 			extensionsString = extensionsStr;
 			extensionsList = extensionsString.split(QRegExp("\\W+"), QString::SkipEmptyParts);
-			QStringListIterator iterator(extensionsList);
-			while(iterator.hasNext())
-			{
-				qDebug(iterator.next().toUtf8());
-			}
 		}
 		static QString getExtensionsString()
 		{

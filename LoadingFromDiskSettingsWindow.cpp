@@ -24,5 +24,5 @@ void LoadingFromDiskSettingsWindow::on_browsePushButton_clicked()
 
 void LoadingFromDiskSettingsWindow::on_extensionsLineEdit_editingFinished()
 {
-	Options::setExtensionsString(ui->extensionsLineEdit->text());
+	Options::setExtensions(ui->extensionsLineEdit->text());
 }
