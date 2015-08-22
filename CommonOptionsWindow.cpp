@@ -18,3 +18,8 @@ void CommonOptionsWindow::on_timeRequestSpinBox_valueChanged(int arg1)
 {
 	Options::setRequestTime(arg1);
 }
+
+void CommonOptionsWindow::on_autorunCheckBox_clicked()
+{
+	Options::setAutorunFlag(!Options::getAutorunFlag());
+}

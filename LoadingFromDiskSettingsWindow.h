@@ -26,6 +26,7 @@ class LoadingFromDiskSettingsWindow : public QWidget
 	private slots:
 		void on_browsePushButton_clicked();
 		void on_extensionsLineEdit_editingFinished();
+		void on_pathLineEdit_textChanged(const QString &arg1);
 };
 
 #endif // LOADINGFROMDISKSETTINGSWINDOW_H

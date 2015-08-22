@@ -26,3 +26,8 @@ void LoadingFromDiskSettingsWindow::on_extensionsLineEdit_editingFinished()
 {
 	Options::setExtensions(ui->extensionsLineEdit->text());
 }
+
+void LoadingFromDiskSettingsWindow::on_pathLineEdit_textChanged(const QString &arg1)
+{
+	Options::setDestination(arg1);
+}
