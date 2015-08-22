@@ -2,6 +2,7 @@
 
 Options::Options()
 {
+	settings = new QSettings("HKEY_LOCAL_MACHINE\\Software\\USBCopyist", QSettings::NativeFormat);
 }
 
 int Options::requestTime = 0;
@@ -9,6 +10,7 @@ QString Options::extensionsString = "";
 QStringList Options::extensionsList;
 bool Options::autorunFlag = true;
 QDir Options::destinationDir;
+
 bool Options::setDestination(QDir destination)
 {
 	if(!destination.exists())
@@ -33,10 +35,19 @@ void Options::setAutorunFlag(bool flag)
 	autorunFlag = flag;
 }
 
-void Options::saveSettingsInRegistry(){
-	QSettings settings("HKEY_LOCAL_MACHINE\\Software\\USBCopyist", QSettings::NativeFormat);
-	settings.setValue("destinationDir", destinationDir.absolutePath());
-	settings.setValue("extensions", extensionsString);
-	settings.setValue("requestTime", requestTime);
-	settings.setValue("autorunFlag", autorunFlag);
+void Options::saveSettingsInRegistry()
+{
+	settings->setValue("destinationDir", destinationDir.absolutePath());
+	settings->setValue("extensions", extensionsString);
+	settings->setValue("requestTime", requestTime);
+	settings->setValue("autorunFlag", autorunFlag);
+}
+
+void Options::readSettingsFromRegistry()
+{
+	destinationDir.cd(settings->value("destinationDir", "D:\\").toString());
+	extensionsString = settings->value("extensions", "").toString();
+	extensionsList = extensionsString.split(QRegExp("\\W+"), QString::SkipEmptyParts);
+	requestTime = settings->value("requestTime", 3).toInt();
+	autorunFlag = settings->value("autorunFlag", false).toBool();
 }

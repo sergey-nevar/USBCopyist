@@ -6,7 +6,7 @@ MainWindow::MainWindow(QWidget *parent) :
 	ui(new Ui::MainWindow)
 {
 	ui->setupUi(this);
-	QTabWidget *tabWidget = new QTabWidget;
+	QTabWidget *tabWidget = new QTabWidget(this);
 	commonOptionsWindow = new CommonOptionsWindow(this);
 	loadingFromDiskSettingsWindow = new LoadingFromDiskSettingsWindow(this);
 	tabWidget->addTab(commonOptionsWindow, "Common Option");

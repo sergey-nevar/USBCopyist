@@ -9,5 +9,6 @@ int main(int argc, char *argv[])
 	MainWindow w;
 	w.show();
 	Options options;
+	options.readSettingsFromRegistry();
 	return a.exec();
 }

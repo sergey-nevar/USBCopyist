@@ -13,6 +13,9 @@ class Options
 	static QStringList extensionsList;
 	static bool autorunFlag;
 	static QDir destinationDir;
+	QSettings *settings;
+
+	void saveSettingsInRegistry();
 
 	public:		
 		static int getRequestTime()
@@ -39,12 +42,13 @@ class Options
 		static void setExtensions(QString extensionsStr);
 		static bool setDestination(QDir destinationDir);
 		static void setRequestTime(int time);
-		static void setAutorunFlag(bool flag);
-		void saveSettingsInRegistry();
+		static void setAutorunFlag(bool flag);		
+		void readSettingsFromRegistry();
 		Options();
 		~Options()
 		{
 			saveSettingsInRegistry();
+			delete settings;
 		}
 };
 
