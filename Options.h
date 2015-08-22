@@ -4,6 +4,7 @@
 #include <QString>
 #include <QStringListIterator>
 #include <QDir>
+#include <QSettings>
 
 class Options
 {
@@ -12,21 +13,13 @@ class Options
 	static QStringList extensionsList;
 	static bool autorunFlag;
 	static QDir destinationDir;
+	static QSettings *settings;
 
-	public:
-		static void setRequestTime(int i)
-		{
-			requestTime = i;
-		}
+	public:		
 		static int getRequestTime()
 		{
 			return requestTime;
-		}
-		static void setExtensions(QString extensionsStr)
-		{
-			extensionsString = extensionsStr;
-			extensionsList = extensionsString.split(QRegExp("\\W+"), QString::SkipEmptyParts);
-		}
+		}		
 		static QString getExtensionsString()
 		{
 			return extensionsString;
@@ -34,21 +27,25 @@ class Options
 		static QStringList getExtensionsList()
 		{
 			return extensionsList;
-		}
-		static void setAutorunFlag(bool flag)
-		{
-			autorunFlag = flag;
-		}
+		}		
 		static bool getAutorunFlag()
 		{
 			return autorunFlag;
 		}
-		static bool setDestination(QDir destinationDir);
-		static QDir getDestination(){
+		static QDir getDestination()
+		{
 			return destinationDir;
 		}
 
+		static void setExtensions(QString extensionsStr);
+		static bool setDestination(QDir destinationDir);
+		static void setRequestTime(int time);
+		static void setAutorunFlag(bool flag);
+
 		Options();
+		~Options(){
+			delete settings;
+		}
 };
 
 #endif // OPTIONS_H
