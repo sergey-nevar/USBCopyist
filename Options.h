@@ -44,6 +44,10 @@ class Options
 			return autorunFlag;
 		}
 		static bool setDestination(QDir destinationDir);
+		static QDir getDestination(){
+			return destinationDir;
+		}
+
 		Options();
 };
 
