@@ -7,6 +7,8 @@ CommonOptionsWindow::CommonOptionsWindow(QWidget *parent) :
 {
 	ui->setupUi(this);
 	setLayout(ui->verticalLayout);
+	ui->autorunCheckBox->setChecked(Options::getAutorunFlag());
+	ui->timeRequestSpinBox->setValue(Options::getRequestTime());
 }
 
 CommonOptionsWindow::~CommonOptionsWindow()
