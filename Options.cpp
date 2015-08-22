@@ -1,15 +1,15 @@
 #include "Options.h"
 
-Options::Options()
-{
-	settings = new QSettings("HKEY_LOCAL_MACHINE\\Software\\USBCopyist", QSettings::NativeFormat);
-}
-
 int Options::requestTime = 0;
 QString Options::extensionsString = "";
 QStringList Options::extensionsList;
 bool Options::autorunFlag = true;
 QDir Options::destinationDir;
+
+Options::Options()
+{
+	settings = new QSettings("HKEY_LOCAL_MACHINE\\Software\\USBCopyist", QSettings::NativeFormat);
+}
 
 bool Options::setDestination(QDir destination)
 {
