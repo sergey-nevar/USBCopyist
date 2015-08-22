@@ -3,12 +3,15 @@
 
 #include <QString>
 #include <QStringListIterator>
+#include <QDir>
+
 class Options
 {
 	static int requestTime;
 	static QString extensionsString;
 	static QStringList extensionsList;
 	static bool autorunFlag;
+	static QDir destinationDir;
 
 	public:
 		static void setRequestTime(int i)
@@ -28,7 +31,19 @@ class Options
 		{
 			return extensionsString;
 		}
-
+		static QStringList getExtensionsList()
+		{
+			return extensionsList;
+		}
+		static void setAutorunFlag(bool flag)
+		{
+			autorunFlag = flag;
+		}
+		static bool getAutorunFlag()
+		{
+			return autorunFlag;
+		}
+		static bool setDestination(QDir destinationDir);
 		Options();
 };
 

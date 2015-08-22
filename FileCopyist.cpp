@@ -3,7 +3,6 @@
 FileCopyist::FileCopyist()
 {
 	source.cd("C:\\");
-	destination.cd("D:\\");
 }
 
 bool FileCopyist::setSource(QDir sourceDir)
@@ -12,15 +11,6 @@ bool FileCopyist::setSource(QDir sourceDir)
 		return false;
 	source = sourceDir;
 	return true;
-}
-
-bool FileCopyist::setDestination(QDir destinationDir)
-{
-	if(!destinationDir.exists())
-		return false;
-	destination = destinationDir;
-	return true;
-
 }
 
 //bool FileCopyist::copyFiles()
