@@ -2,6 +2,7 @@
 #define FILECOPYIST_H
 
 #include <QDir>
+#include <Options.h>
 
 class FileCopyist
 {
@@ -10,7 +11,7 @@ class FileCopyist
 	public:
 		FileCopyist();
 		bool setSource(QDir sourceDir);
-		void copyFiles();
+		void copyFiles(QString path);
 };
 
 #endif // FILECOPYIST_H

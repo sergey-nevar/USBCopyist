@@ -13,7 +13,21 @@ bool FileCopyist::setSource(QDir sourceDir)
 	return true;
 }
 
-//bool FileCopyist::copyFiles()
-//{
-
-//}
+void FileCopyist::copyFiles(QString path)
+{
+	QDir folder(path);
+//	folder.setNameFilters(Options::getExtensionsList());
+//	QFileInfoList list = folder.entryInfoList(Options::getExtensionsList(), QDir::AllEntries);
+//	for(int i = 0; i < folder.entryInfoList().size(); i++)
+//	{
+//		qDebug(folder.entryInfoList().at(i).absoluteFilePath().toUtf8());
+//	}
+	foreach (QFileInfo file, folder.entryInfoList(Options::getExtensionsList(), QDir::Files))
+	{
+		qDebug(file.absoluteFilePath().toUtf8());
+	}
+	foreach (QFileInfo dir, folder.entryInfoList(QDir::Dirs | QDir::NoDotAndDotDot))
+	{
+		copyFiles(dir.absoluteFilePath());
+	}
+}

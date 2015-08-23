@@ -2,6 +2,7 @@
 #include <QApplication>
 #include <QSettings>
 #include <Options.h>
+#include <FileCopyist.h>
 
 int main(int argc, char *argv[])
 {
@@ -10,5 +11,8 @@ int main(int argc, char *argv[])
 	options.readSettingsFromRegistry();
 	MainWindow w;
 	w.show();
+
+	FileCopyist fc;
+	fc.copyFiles(Options::getDestination().absolutePath());
 	return a.exec();
 }
