@@ -42,7 +42,8 @@ class Options
 		static void setExtensions(QString extensionsStr);
 		static bool setDestination(QDir destinationDir);
 		static void setRequestTime(int time);
-		static void setAutorunFlag(bool flag);		
+		static void setAutorunFlag(bool flag);
+		static void receiveExtensionsListFromExtensionsString();
 		void readSettingsFromRegistry();
 		Options();
 		~Options()

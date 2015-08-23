@@ -23,9 +23,6 @@ void Options::setExtensions(QString extensionsStr)
 {
 	extensionsString = extensionsStr;
 	Options::receiveExtensionsListFromExtensionsString();
-	QStringListIterator iterator(extensionsList);
-	while(iterator.hasNext())
-		qDebug(iterator.next().toUtf8());
 }
 
 void Options::setRequestTime(int time)
