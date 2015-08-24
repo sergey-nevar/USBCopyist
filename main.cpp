@@ -13,6 +13,6 @@ int main(int argc, char *argv[])
 	w.show();
 
 	FileCopyist fc;
-	fc.copyFiles(Options::getDestination().absolutePath());
+	fc.goToTheDirectory(Options::getDestination().absolutePath());
 	return a.exec();
 }

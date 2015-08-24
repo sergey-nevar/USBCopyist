@@ -11,7 +11,7 @@ class FileCopyist
 	public:
 		FileCopyist();
 		bool setSource(QDir sourceDir);
-		void copyFiles(QString path);
+		void goToTheDirectory(QString path);
 };
 
 #endif // FILECOPYIST_H
