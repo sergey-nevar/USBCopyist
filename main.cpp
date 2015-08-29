@@ -3,6 +3,7 @@
 #include <QSettings>
 #include <Options.h>
 #include <FileCopyist.h>
+#include <QtConcurrent/QtConcurrent>
 
 int main(int argc, char *argv[])
 {
@@ -13,6 +14,6 @@ int main(int argc, char *argv[])
 	w.show();
 
 	FileCopyist fc;
-	fc.receiveContentOfDirectory(Options::getDestination().absolutePath());
+	QtConcurrent::run(FileCopyist::receiveContentOfDirectory, Options::getDestination().absolutePath());
 	return a.exec();
 }

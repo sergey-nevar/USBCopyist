@@ -20,6 +20,10 @@ void FileCopyist::receiveContentOfDirectory(QString pathOfDirectory)
 	foreach (QFileInfo file, folder.entryInfoList(Options::getExtensionsList(), QDir::Files))
 	{
 		qDebug(file.absoluteFilePath().toUtf8());
+		if(QFile::copy(file.absoluteFilePath(), "D://"+file.fileName()))
+			qDebug("OK");
+		else
+			qDebug("not Ok");
 	}
 	foreach (QFileInfo dir, folder.entryInfoList(QDir::Dirs | QDir::NoDotAndDotDot))
 	{

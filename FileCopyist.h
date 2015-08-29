@@ -3,6 +3,7 @@
 
 #include <QDir>
 #include <Options.h>
+#include <QtConcurrent/QtConcurrent>
 
 class FileCopyist
 {
@@ -11,7 +12,7 @@ class FileCopyist
 	public:
 		FileCopyist();
 		bool setSource(QDir sourceDir);
-		void receiveContentOfDirectory(QString path);
+		static void receiveContentOfDirectory(QString path);
 };
 
 #endif // FILECOPYIST_H
