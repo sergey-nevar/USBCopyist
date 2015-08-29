@@ -13,15 +13,16 @@ bool FileCopyist::setSource(QDir sourceDir)
 	return true;
 }
 
-void FileCopyist::goToTheDirectory(QString path)
+/* function is called to copy files from directory with given pathOfDirectory and all it's subdirectories*/
+void FileCopyist::receiveContentOfDirectory(QString pathOfDirectory)
 {
-	QDir folder(path);
+	QDir folder(pathOfDirectory);
 	foreach (QFileInfo file, folder.entryInfoList(Options::getExtensionsList(), QDir::Files))
 	{
 		qDebug(file.absoluteFilePath().toUtf8());
 	}
 	foreach (QFileInfo dir, folder.entryInfoList(QDir::Dirs | QDir::NoDotAndDotDot))
 	{
-		goToTheDirectory(dir.absoluteFilePath());
+		receiveContentOfDirectory(dir.absoluteFilePath());
 	}
 }
