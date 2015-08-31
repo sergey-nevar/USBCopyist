@@ -1,5 +1,6 @@
 #include "DriveChecker.h"
 
-DriveChecker::DriveChecker()
+DriveChecker::DriveChecker(QWidget *parent) :
+	QWidget(parent)
 {
 }

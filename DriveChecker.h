@@ -1,10 +1,18 @@
 #ifndef DRIVECHECKER_H
 #define DRIVECHECKER_H
 
-class DriveChecker
+#include <QWidget>
+
+class DriveChecker : public QWidget
 {
+		Q_OBJECT
 	public:
-		DriveChecker();
+		explicit DriveChecker(QWidget *parent = 0);
+
+	signals:
+
+	public slots:
+
 };
 
 #endif // DRIVECHECKER_H
