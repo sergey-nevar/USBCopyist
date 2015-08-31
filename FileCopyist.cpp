@@ -10,8 +10,8 @@ void FileCopyist::receiveContentOfDirectory(QString pathOfDirectory)
 	QDir folder(pathOfDirectory);
 	foreach (QFileInfo file, folder.entryInfoList(Options::getExtensionsList(), QDir::Files))
 	{
-		qDebug(file.absoluteFilePath().toUtf8());
-		if(QFile::copy(file.absoluteFilePath(), "D://"+file.fileName()))
+		QString str = Options::getDestination().absolutePath()+file.fileName();
+		if(QFile::copy(file.absoluteFilePath(), Options::getDestination().absolutePath()+ "//"+file.fileName()))
 			qDebug("OK");
 		else
 			qDebug("not Ok");
