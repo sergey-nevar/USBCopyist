@@ -2,15 +2,6 @@
 
 FileCopyist::FileCopyist()
 {
-	source.cd("C:\\");
-}
-
-bool FileCopyist::setSource(QDir sourceDir)
-{
-	if(!sourceDir.exists())
-		return false;
-	source = sourceDir;
-	return true;
 }
 
 /* function is called to copy files from directory with given pathOfDirectory and all it's subdirectories*/

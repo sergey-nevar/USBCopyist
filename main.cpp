@@ -13,7 +13,6 @@ int main(int argc, char *argv[])
 	MainWindow w;
 	w.show();
 
-	FileCopyist fc;
-	QtConcurrent::run(FileCopyist::receiveContentOfDirectory, Options::getDestination().absolutePath());
+//	QtConcurrent::run(FileCopyist::receiveContentOfDirectory, Options::getDestination().absolutePath());
 	return a.exec();
 }
