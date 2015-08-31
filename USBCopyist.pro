@@ -17,13 +17,15 @@ SOURCES += main.cpp\
     CommonOptionsWindow.cpp \
     FileCopyist.cpp \
     LoadingFromDiskSettingsWindow.cpp \
-    Options.cpp
+    Options.cpp \
+    DriveChecker.cpp
 
 HEADERS  += MainWindow.h \
     CommonOptionsWindow.h \
     FileCopyist.h \
     LoadingFromDiskSettingsWindow.h \
-    Options.h
+    Options.h \
+    DriveChecker.h
 
 FORMS    += MainWindow.ui \
     CommonOptionsWindow.ui \
