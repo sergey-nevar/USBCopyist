@@ -2,7 +2,6 @@
 #define DRIVECHECKER_H
 
 #include <QWidget>
-#include <QFileInfoList>
 #include <FileCopyist.h>
 #include <QtConcurrent/QtConcurrent>
 #include <QTimer>

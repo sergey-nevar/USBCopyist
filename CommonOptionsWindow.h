@@ -18,7 +18,6 @@ class CommonOptionsWindow : public QWidget
 
 	private slots:
 		void on_timeRequestSpinBox_valueChanged(int arg1);
-
 		void on_autorunCheckBox_clicked();
 
 	private:
