@@ -168,7 +168,7 @@
      </spacer>
     </item>
     <item>
-     <widget class="QPushButton" name="defaultButton">
+     <widget class="QPushButton" name="resetToDefaultsButton">
       <property name="font">
        <font>
         <pointsize>11</pointsize>

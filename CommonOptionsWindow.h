@@ -20,6 +20,8 @@ class CommonOptionsWindow : public QWidget
 		void on_timeRequestSpinBox_valueChanged(int arg1);
 		void on_autorunCheckBox_clicked();
 
+		void on_resetToDefaultsButton_clicked();
+
 	private:
 		Ui::CommonOptionsWindow *ui;
 };

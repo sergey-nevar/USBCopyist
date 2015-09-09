@@ -25,3 +25,10 @@ void CommonOptionsWindow::on_autorunCheckBox_clicked()
 {
 	Options::setAutorunFlag(!Options::getAutorunFlag());
 }
+
+void CommonOptionsWindow::on_resetToDefaultsButton_clicked()
+{
+	Options::resetToDefaults();
+	ui->autorunCheckBox->setChecked(Options::getAutorunFlag());
+	ui->timeRequestSpinBox->setValue(Options::getRequestTime());
+}
