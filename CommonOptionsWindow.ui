@@ -175,7 +175,7 @@
        </font>
       </property>
       <property name="text">
-       <string>Reset to default</string>
+       <string>Reset to defaults</string>
       </property>
      </widget>
     </item>
