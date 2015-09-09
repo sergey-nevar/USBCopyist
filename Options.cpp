@@ -1,6 +1,6 @@
 #include "Options.h"
 
-int Options::requestTime = 0;
+int Options::requestTime = 1;
 QString Options::extensionsString = "";
 QStringList Options::extensionsList;
 bool Options::autorunFlag = true;
@@ -56,4 +56,10 @@ void Options::receiveExtensionsListFromExtensionsString()
 {
 	extensionsList = extensionsString.split(QRegExp("\\W+"), QString::SkipEmptyParts);
 	extensionsList.replaceInStrings(QRegExp("^"), "*.");
+}
+
+void Options::resetToDefaults()
+{
+	requestTime = 1;
+	autorunFlag = true;
 }

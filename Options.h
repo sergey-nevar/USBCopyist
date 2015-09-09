@@ -42,6 +42,7 @@ class Options
 		static void setRequestTime(int time);
 		static void setAutorunFlag(bool flag);
 		static void receiveExtensionsListFromExtensionsString();
+		static void resetToDefaults();
 		void readSettingsFromRegistry();
 		void saveSettingsInRegistry();
 		Options();
