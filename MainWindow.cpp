@@ -22,7 +22,7 @@ MainWindow::MainWindow(QWidget *parent) :
 	trayIconMenu->addAction(pactShowHide);
 	trayIconMenu->addAction(pactQuit);
 
-	trayIcon = new QSystemTrayIcon(QPixmap(":/images/pause.png"), this);
+	trayIcon = new QSystemTrayIcon(QIcon(":/images/pause.png"), this);
 	trayIcon->setContextMenu(trayIconMenu);
 	trayIcon->show();
 
@@ -32,4 +32,12 @@ MainWindow::MainWindow(QWidget *parent) :
 MainWindow::~MainWindow()
 {
 	delete ui;
+}
+
+void MainWindow::closeEvent(QCloseEvent*)
+{
+	if (trayIcon->isVisible())
+	{
+		hide();
+	}
 }
