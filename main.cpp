@@ -13,5 +13,8 @@ int main(int argc, char *argv[])
 
 	DriveChecker dc;
 	dc.runChecking();
+
+	QApplication::setQuitOnLastWindowClosed(false);
+
 	return a.exec();
 }
