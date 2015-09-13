@@ -32,7 +32,7 @@ class Options
 		{
 			return autorunFlag;
 		}
-		static QDir getDestination()
+		static QDir getDestinationDir()
 		{
 			return destinationDir;
 		}

@@ -8,7 +8,7 @@ LoadingFromDiskSettingsWindow::LoadingFromDiskSettingsWindow(QWidget *parent) :
 	ui->setupUi(this);
 	setLayout(ui->mainLayout);
 	ui->extensionsLineEdit->setText(Options::getExtensionsString());
-	ui->pathLineEdit->setText(Options::getDestination().absolutePath());
+	ui->pathLineEdit->setText(Options::getDestinationDir().absolutePath());
 }
 
 LoadingFromDiskSettingsWindow::~LoadingFromDiskSettingsWindow()
